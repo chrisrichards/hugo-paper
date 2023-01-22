@@ -1,11 +1,11 @@
 <div align="center">
-<h1>Paper <sup><sup><sub>6.7</sub></sup></sup></h1>
+<h1>Paper <sup><sup><sub>6.7</sub></sup></sup> for chrisrichards.co.uk</h1>
 
 Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
 <hr />
 
-A simple, clean, flexible Hugo theme.
+A simple, clean, flexible Hugo theme. Ported to and customized for [chrisrichards.co.uk](https://chrisrichards.co.uk)
 
 ⚡️ Fast | 📸 Fluent | 🫙 Smooth
 
@@ -13,24 +13,18 @@ A simple, clean, flexible Hugo theme.
 
 ---
 
-## Links
-
-Product Hunt: [producthunt.com/posts/hugo-paper-6](https://www.producthunt.com/posts/hugo-paper-6)
-
-Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
-
 ## Overview
 
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot.png)
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_dark.png)
-![](https://raw.githubusercontent.com/nanxiaobei/hugo-paper/main/images/screenshot_mobile.png)
+![](https://raw.githubusercontent.com/chrisrichards/hugo-paper/main/images/screenshot.png)
+![](https://raw.githubusercontent.com/chrisrichards/hugo-paper/main/images/screenshot_dark.png)
+![](https://raw.githubusercontent.com/chrisrichards/hugo-paper/main/images/screenshot_mobile.png)
 
 ## Install
 
 Inside the folder of your Hugo project, run:
 
 ```bash
-git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+git submodule add https://github.com/chrisrichards/hugo-paper themes/paper
 ```
 
 Open `config.toml`, change `theme` to `"paper"`:
@@ -74,10 +68,4 @@ disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
 
 ## License
 
-[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/main/LICENSE) (c) [nanxiaobei](https://lee.so/)
-
-## FUTAKE
-
-Try [**FUTAKE**](https://sotake.com/futake) in WeChat. A mini app for your inspiration moments. 🌈
-
-![](https://s3.bmp.ovh/imgs/2022/07/21/452dd47aeb790abd.png)
+[MIT License](https://github.com/chrisrichards/hugo-paper/blob/main/LICENSE) (c) [Chris Richards](https://chrisrichards.co.uk/)
