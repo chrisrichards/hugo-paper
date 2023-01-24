@@ -1328,6 +1328,10 @@ body {
   gap: 0.5rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
@@ -1362,6 +1366,11 @@ body {
 
 .bg-black\/\[3\%\] {
   background-color: rgb(0 0 0 / 3%);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .p-3 {
