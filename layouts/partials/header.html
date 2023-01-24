@@ -1,13 +1,32 @@
-<header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
-  <div class="relative z-50 mr-auto flex items-center">
-    <a
-      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
-      href="{{ `` | absURL }}"
-      >{{ site.Title }}</a
-    >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}[background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert{{ else }}[background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)]{{ end }} dark:[background-position:right]"
-    ></a>
+<header class="mx-auto max-w-3xl pt-8 pb-8 px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto pb-8 flex justify-between items-center">
+    <div class="flex items-center">
+      {{ $avatar_url := $.Scratch.Get "avatar_url" }}
+      {{ if $avatar_url }}
+      <div
+        class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-xl dark:bg-white/80"
+      >
+        <img
+          class="my-0 h-14 w-14 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+          src="{{ $avatar_url }}"
+        />
+      </div>
+      {{ end }}<!---->
+      <a
+        class="text-3xl font-bold"
+        href="{{ `` | absURL }}"
+        >
+          {{ site.Title }}
+      </a>
+    </div>
+    <a class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer">
+        <svg id="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </svg>
+        <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </svg>
+  </a>
   </div>
 
   <a
@@ -58,35 +77,17 @@
     });
   </script>
 
-  <div
-    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
-  >
-    {{ $url := .RelPermalink }}<!---->
-    {{ with site.Menus.main }}
-    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
-      {{ range . }}
-      <a
-        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
-        href="{{ .URL }}"
-        >{{ .Name }}</a
-      >
-      {{ end }}
-    </nav>
-    {{ end }}<!---->
-
-    {{ with $.Scratch.Get "social_list" }}
-    <nav
-      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+  {{ $url := .RelPermalink }}<!---->
+  {{ with site.Menus.main }}
+  <nav class="lg:flex lg:flex-wrap lg:justify-between">
+    {{ range . }}
+    <a
+      class="font-bold text-slate-400 text-2xl uppercase lg:text-base"
+      href="{{ .URL }}"
+      >{{ .Name }}</a
     >
-      {{ range . }}<!---->
-      <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
-        style="--url: url(./{{ . }}.svg)"
-        href="{{ if eq . `rss` }} {{ `index.xml` | absURL }} {{ else if eq . `mastodon` }} {{ site.Params.Get . }} {{ else }} https://{{ . }}.com/{{ site.Params.Get . }} {{ end }}"
-        target="_blank"
-      ></a>
-      {{ end }}<!---->
-    </nav>
-    {{ end }}<!---->
-  </div>
+    {{ end }}
+  </nav>
+  {{ end }}<!---->
+
 </header>

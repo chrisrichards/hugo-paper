@@ -2,7 +2,7 @@ baseURL = "https://hugo-paper.vercel.app/"
 # title = "Hugo Themes"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
-paginate = 3
+paginate = 10
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
@@ -17,12 +17,12 @@ title = "Paper"
 [params]
   color = 'linen'
 
-  twitter = 'nanxiaobei'
-  github = 'nanxiaobei'
-  instagram = 'nan.xiaobei'
+  twitter = 'crichards2000'
+  github = 'chrisrichards'
+  mastodon = '@chrisrichards@mastodon.social'
 
-  avatar = 'nanxiaobei@gmail.com'
-  name = 'Lee'
+  avatar = 'chris@chrisrichards.co.uk'
+  name = 'Chris'
   bio = 'Discover fresh context'
 # ------------------------------
 
@@ -35,15 +35,25 @@ title = "Paper"
 [menu]
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
     weight = 10
   [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
     weight = 10
+  [[menu.main]]
+    identifier = "now"
+    name = "Now"
+    url = "/now/"
+    weight = 20
 
 [taxonomies]
 category = "categories"
