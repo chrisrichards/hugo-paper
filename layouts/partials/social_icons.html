@@ -1,0 +1,13 @@
+<div class="flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6">
+    {{- range . }}
+    <a
+      class="h-8 w-8 lg:h-6 lg:w-6"
+      style="color: {{ .color }}"
+      href="{{ trim .url " " }}"
+      target="_blank"
+      rel="noopener noreferrer me"
+      title="{{ (.title | default .name) | title }}">
+        {{ partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>

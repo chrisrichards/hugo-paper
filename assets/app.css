@@ -92,3 +92,7 @@ html.dark #moon {
 html:not(.dark) #sun {
   display: none;
 }
+
+.inline-svg svg {
+  display: inline;
+}

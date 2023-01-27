@@ -1,0 +1,18 @@
+<ul>
+    {{- range . }}
+    <li>
+      <a
+        href="{{ trim .url " " }}"
+        target="_blank"
+        rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+          <span
+            class="h-8 w-8 lg:h-6 lg:w-6 inline-svg"
+            style="color: {{ .color }}">
+            {{ partial "svg.html" . }} 
+          </span>
+          {{ (.title | default .name) | title }}
+      </a>
+    </li>
+    {{- end }}
+  </ul>
