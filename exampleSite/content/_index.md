@@ -6,3 +6,5 @@ layout: 'page'
 ---
 
 Testing one, two
+
+{{< social_list >}}

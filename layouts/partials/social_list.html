@@ -1,18 +1,13 @@
-<ul>
-    {{- range . }}
-    <li>
-      <a
-        href="{{ trim .url " " }}"
-        target="_blank"
-        rel="noopener noreferrer me"
-        title="{{ (.title | default .name) | title }}">
-          <span
-            class="h-8 w-8 lg:h-6 lg:w-6 inline-svg"
-            style="color: {{ .color }}">
-            {{ partial "svg.html" . }} 
-          </span>
-          {{ (.title | default .name) | title }}
-      </a>
-    </li>
-    {{- end }}
-  </ul>
+<ul role="list" class="p-0">
+  {{- range . }}
+  <li class="flex p-0">
+    <a class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+      href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me">
+      <span class="h-6 w-6 flex-none">
+         {{ partial "svg.html" . }}
+      </span>
+      <span class="ml-2">{{ (.title | default .name) | title }}</span>
+    </a>
+  </li>
+  {{- end }}
+</ul>

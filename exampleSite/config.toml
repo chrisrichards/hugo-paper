@@ -24,6 +24,27 @@ title = "Paper"
   avatar = 'chris@chrisrichards.co.uk'
   name = 'Chris'
   bio = 'Discover fresh context'
+
+  [[params.socials]]
+  name = "github"
+  url = "https://github.com/chrisrichards"
+
+  [[params.socials]]
+  name = "mastodon"
+  url = "https://mastodon.social/@chrisrichards"
+
+  [[params.socials]]
+  name = "LinkedIn"
+  url = "https://www.printables.com/social/94683-chris-r"
+
+  [[params.socials]]
+  name = "printables"
+  url = "https://www.printables.com/social/94683-chris-r"
+
+  [[params.socials]]
+  name = "email"
+  url = "mailto:chris@chrisrichards.co.uk"
+
 # ------------------------------
 
 # needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
